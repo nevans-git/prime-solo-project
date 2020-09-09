@@ -8,8 +8,9 @@ class UserPage extends Component {
   render() {
     return (
       <div>
-        <h1 id="welcome">Welcome, {this.props.store.user.username}!</h1>
+        <h1 id="welcome">Welcome, {this.props.store.user.firstName}!</h1>
         <p>Your ID is: {this.props.store.user.id}</p>
+        <p>Click on 'MyCloset' to view your closet!</p>
         <LogOutButton className="log-in" />
       </div>
     );

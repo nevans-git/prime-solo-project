@@ -16,7 +16,7 @@ class RegisterForm extends Component {
     this.props.dispatch({
       type: 'REGISTER',
       payload: {
-        firstName: this.state.first,
+        firstName: this.state.firstName,
         lastName: this.state.lastName,
         username: this.state.username,
         password: this.state.password,
@@ -39,6 +39,7 @@ class RegisterForm extends Component {
             {this.props.store.errors.registrationMessage}
           </h3>
         )}
+        {/* How do I get first name and last name to update in the database??? */}
         <div>
           <label htmlFor="first-name">
             First Name:

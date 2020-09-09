@@ -24,7 +24,7 @@ class RegisterPage extends Component {
               this.props.history.push('/login'); // pushes user to login page after completing Create Account form
             }}
           >
-            Login
+            Already have an account? Click on me to login!
           </button>
         </center>
       </div>
