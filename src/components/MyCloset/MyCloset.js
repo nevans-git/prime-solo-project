@@ -16,27 +16,28 @@ import LogOutButton from '../LogOutButton/LogOutButton'; // Remember to import t
 // If you needed to add local state or other things,
 // you can make it a class component like:
 
-
+// FIGURE OUT THE ROUTING... MIGHT HAVE TO JUST PUSH EVERYTHING TO ONE LOCATION
 class MyCloset extends React.Component {
 
-  handleFallImageClick = () => {
+  handleFallImageClick = (id) => {
     console.log('fall image was clicked!');
   
-    // this.props.history.push('/fall-closet'); // REMEMBER TO SETUP ROUTE FOR THIS in APP.JS
+
+    this.props.history.push(`/closetItemPage`); // REMEMBER TO SETUP ROUTE FOR THIS in APP.JS
     
   }
   
   handleWinterImageClick = () => {
     console.log('winter image was clicked!'); // REMEMBER TO SETUP ROUTE FOR THIS in APP.JS
   
-    // this.props.history.push('/winter-closet');
+    this.props.history.push('/closetItemPage'); // Need to figure out how to trigger Winter closet specifically after the user clicks on this image
     
   }
   
   handleSpringSummerImageClick = () => {
-    console.log('spring/summer image was clicked!');
+    console.log('spring/summer image was clicked!'); // MIGHT HAVE TO DO SPECIFIC SAGA STUFF TO GET THE NEXT PAGE TO LOAD THE RIGHT DATA
   
-    // this.props.history.push('/spring-summer-closet'); // REMEMBER TO SETUP ROUTE FOR THIS in APP.JS
+    this.props.history.push('/closetItemPage'); // REMEMBER TO SETUP ROUTE FOR THIS in APP.JS
     
   }
 
@@ -48,15 +49,15 @@ class MyCloset extends React.Component {
       <h2>MyClosets</h2>
       <div>
         <h3>Fall</h3>
-        <img src={"FallClosetPic.jpg"} alt='fall image' onClick={this.handleFallImageClick} />
+        <img src={"./FallClosetPic.jpg"} alt='fall image' onClick={this.handleFallImageClick} />
       </div>
       <div>
         <h3>Winter</h3>
-        <img src={'WinterClosetPic.jpg'} alt='winter image' onClick={this.handleWinterImageClick}/>
+        <img src={'./WinterClosetPic.jpg'} alt='winter image' onClick={this.handleWinterImageClick}/>
       </div>
       <div>
         <h3>Spring/Summer</h3>
-        <img src={"SpringSummerCloset.jpg"} alt='spring/summer image' onClick={this.handleSpringSummerImageClick}/>
+        <img src={"./SpringSummerCloset.jpg"} alt='spring/summer image' onClick={this.handleSpringSummerImageClick}/>
       </div>
       <br/>
       <div>

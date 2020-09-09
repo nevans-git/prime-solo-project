@@ -5,12 +5,22 @@ import mapStoreToProps from '../../redux/mapStoreToProps';
 
 class UserPage extends Component {
   // this component doesn't do much to start, just renders some user info to the DOM
+
+  handleSendToMyCloset = () => {
+    this.props.history.push('/myCloset');
+  }
+
   render() {
     return (
       <div>
-        <h1 id="welcome">Welcome, {this.props.store.user.firstName}!</h1>
+        <h1 id="welcome">Welcome, {this.props.store.user.firstname}!</h1>
         <p>Your ID is: {this.props.store.user.id}</p>
-        <p>Click on 'MyCloset' to view your closet!</p>
+        <p>Click on 'MyClosets' button below to view your seasonal closets!</p>
+        <button onClick={this.handleSendToMyCloset}>MyCloset</button>
+        {/* Take the br tags out when you start styling the application */}
+        <br />
+        <br />
+
         <LogOutButton className="log-in" />
       </div>
     );
