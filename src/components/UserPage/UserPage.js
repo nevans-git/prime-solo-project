@@ -14,9 +14,9 @@ class UserPage extends Component {
     return (
       <div>
         <h1 id="welcome">Welcome, {this.props.store.user.firstname}!</h1>
-        <p>Your ID is: {this.props.store.user.id}</p>
-        <p>Click on 'MyClosets' button below to view your seasonal closets!</p>
-        <button onClick={this.handleSendToMyCloset}>MyCloset</button>
+        <p>Your iCloset ID is: {this.props.store.user.id}</p>
+        <p>Click on the 'MyClosets' button below to view your seasonal closets!</p>
+        <button onClick={this.handleSendToMyCloset}>MyClosets</button>
         {/* Take the br tags out when you start styling the application */}
         <br />
         <br />

@@ -41,9 +41,19 @@ class MyCloset extends React.Component {
     
   }
 
+  handleBack = () => {
+    console.log('back button clicked!');
+
+    this.props.history.push('/home'); // Sending user back to the previous page (Home)
+    
+  }
+
   render() {
     return (
       <>
+      <div>
+        <button onClick={this.handleBack}>Back</button>
+      </div>
       {/* Figure out how to get the images to display */}
       <div>
       <h2>MyClosets</h2>
