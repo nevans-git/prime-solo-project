@@ -7,7 +7,7 @@ const router = express.Router();
  */
 router.get('/', (req, res) => {
   // GET route code here
-  let queryText = `SELECT 'Winter' FROM "seasons"`; // This is selecting the Winter data from the 
+  let queryText = `SELECT 'Spring/Summer' FROM "seasons "`; // This is selecting the Spring/Summer data from the 
 
   pool.query(queryText).then((response) => {
       console.log(response.rows);
@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
       res.send(response.rows);
 
   }).catch((error) => {
-      console.log('error in GET in winterCloset.router.js', error);
+      console.log('error in GET in springSummerCloset.router.js', error);
       
   })
 });
