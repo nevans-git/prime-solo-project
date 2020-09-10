@@ -1,6 +1,7 @@
 import React from 'react';
 import LogOutButton from '../LogOutButton/LogOutButton';
 import FallCloset from '../FallCloset/FallCloset';
+import WinterCloset from '../WinterCloset/WinterCloset';
 
 
 // This is one of our simplest components
@@ -22,6 +23,7 @@ class ClosetItemView extends React.Component {
     </div>
     <div className="container">
       <FallCloset />
+      <WinterCloset />
     <div>
       <p>This page will be hidden and filled with items once I get the images in MyCloset setup </p>
     </div>

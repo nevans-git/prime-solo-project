@@ -3,23 +3,23 @@ import { connect } from 'react-redux';
 import mapStoreToProps from '../../redux/mapStoreToProps';
 
 // THIS WILL BE IMPORTED INTO THE ClosetItemView!!!
-class FallCloset extends React.Component {
+class WinterCloset extends React.Component {
     // NOT SURE IF I NEED STATE HERE
 
 
     componentDidMount(){
-        console.log('fall closet rendered!');
-        this.fetchFallCloset();
+        console.log('winter closet rendered!');
+        this.fetchWinterCloset();
         
     }
 
     // NOT SURE HOW I SHOULD SETUP THIS DISPATCH
-    fetchFallCloset = (event) => {
-        console.log('Fall closet:', event);
+    fetchWinterCloset = (event) => {
+        console.log('Winter closet:', event);
         
         // event.preventDefault();
 
-        this.props.dispatch({ type: 'FETCH_FALL_CLOSET'}); // GONNA HAVE TO DO ANOTHER BUT SENDING DATA TO THE SERVER IN THE ADD ITEM WHEN YOU GET TO IT
+        this.props.dispatch({ type: 'FETCH_WINTER_CLOSET'}); // GONNA HAVE TO DO ANOTHER BUT SENDING DATA TO THE SERVER IN THE ADD ITEM WHEN YOU GET TO IT
     }
 
     handleAddItem = () => {
@@ -32,7 +32,7 @@ class FallCloset extends React.Component {
     render(){
         return(
             <>
-            <h2>Fall Closet</h2>
+            <h2>Winter Closet</h2>
             <div>
                 <h3>Tops</h3>
                 <img />
@@ -66,4 +66,4 @@ class FallCloset extends React.Component {
     }
 }
 
-export default connect(mapStoreToProps)(FallCloset);
+export default connect(mapStoreToProps)(WinterCloset);
