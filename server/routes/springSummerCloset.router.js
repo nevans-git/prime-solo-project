@@ -7,7 +7,8 @@ const router = express.Router();
  */
 router.get('/', (req, res) => {
   // GET route code here
-  let queryText = `SELECT 'Spring/Summer' FROM "seasons "`; // This is selecting the Spring/Summer data from the 
+  let queryText = `SELECT * FROM "seasons "
+                    WHERE "season_name" = 'Spring/Summer'`; // This is selecting the Spring/Summer season
 
   pool.query(queryText).then((response) => {
       console.log(response.rows);

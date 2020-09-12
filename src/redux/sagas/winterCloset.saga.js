@@ -3,7 +3,9 @@ import axios from 'axios';
 
 function* fetchWinterCloset(action) {
     try{
-        yield put({ type: 'GET_WINTER_CLOSET', payload: action})
+        const response = yield axios.get('/api/seasons/winter'); 
+        
+        yield put({ type: 'SET_WINTER_CLOSET', payload: response.data}); // LEFT OFF HERE... UPDATED EACH CLOSET ROUTER  AND MADE ROUTES IN SERVER.JS
 
     } catch(error){
         console.log('error in fetchWinterCloset', error);

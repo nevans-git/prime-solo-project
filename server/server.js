@@ -9,7 +9,12 @@ const sessionMiddleware = require('./modules/session-middleware');
 const passport = require('./strategies/user.strategy');
 
 // Route includes
-const userRouter = require('./routes/user.router');
+const userRouter = require('./routes/user.router'); 
+const fallRouter = require('./routes/fallCloset.router'); // added this (this corresponds with the 'added this' below)
+const winterRouter = require('./routes/winterCloset.router'); // added this (this corresponds with the 'added this' below)
+const springSummerRouter = require('./routes/springSummerCloset.router'); // added this (this corresponds with the 'added this' below)
+const miscRouter = require('./routes/misc.router'); // added this
+
 
 // Body parser middleware
 app.use(bodyParser.json());
@@ -24,6 +29,10 @@ app.use(passport.session());
 
 /* Routes */
 app.use('/api/user', userRouter);
+app.use('/api/seasons/fall', fallRouter); // added this
+app.use('/api/seasons/winter', winterRouter); // added this
+app.use('/api/seasons/spring-summer', springSummerRouter); // added this
+app.use('/api/misc'); // added this
 
 // Serve static files
 app.use(express.static('build'));

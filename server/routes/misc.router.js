@@ -8,7 +8,7 @@ const router = express.Router();
 router.get('/', (req, res) => {
   // GET route code here
   let queryText = `SELECT * FROM "seasons"
-                    WHERE "season_name" = 'Fall'`; // This is selecting the Fall season
+                    WHERE "season_name" = 'Winter'`; // FIX THIS TO GET ALL THE MISC ITEMS 
 
   pool.query(queryText).then((response) => {
       console.log(response.rows);
@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
       res.send(response.rows);
 
   }).catch((error) => {
-      console.log('error in GET in fallCloset.router.js', error);
+      console.log('error in GET in winterCloset.router.js', error);
       
   })
 });

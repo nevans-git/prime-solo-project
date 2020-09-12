@@ -3,7 +3,7 @@ import axios from 'axios';
 
 function* fetchFallCloset(action) {
     try{
-        const response = yield axios.get('/api/seasons');
+        const response = yield axios.get('/api/seasons/fall');
         
         yield put({ type: 'SET_FALL_CLOSET', payload: response.data})
 

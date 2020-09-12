@@ -25,7 +25,7 @@ class FallCloset extends React.Component {
     handleAddItem = () => {
         console.log('add item button was clicked!');
 
-        this.props.history.push(''); // Add the '/addItem' route in here when its made 
+        this.props.history.push(''); // Add the '/addItem' route in here when its made ... and add it to add item button below
         
     }
 
@@ -35,28 +35,30 @@ class FallCloset extends React.Component {
             <h2>Fall Closet</h2>
             <div>
                 <h3>Tops</h3>
-                <img />
+                <img src={'tops.jpeg'} alt='Tops image'/>
             </div>
             <div>
                 <h3>Bottoms</h3>
-                <img />
+                <img src={'bottoms.jpg'} alt='Bottoms image'/>
             </div>
             <div>
                 <h3>Hoodies</h3>
-                <img />
+                <img src={'hoodies.jpeg'} alt='Hoodies image'/>
             </div>
             <div>
                 <h3>Jackets</h3>
-                <img />
+                <img src={'jackets.jpg'} alt='Jackets image'/>
             </div>
             <div>
                 <h3>Shoes</h3>
-                <img />
+                <img src={'shoes.jpg'} alt='Shoes image'/>
             </div>
             <div>
                 <h3>Hats</h3>
-                <img />
+                <img src={'hats.jpg'} alt='Hats image'/>
             </div>
+            {/* Take out break when you start styling */}
+            <br/> 
 
             <div>
                 <button>Add Item</button>

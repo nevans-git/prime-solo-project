@@ -21,6 +21,7 @@ import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 
 import './App.css';
+import AddItems from '../AddItems/AddItems';
 
 class App extends Component {
   componentDidMount() {
@@ -43,6 +44,11 @@ class App extends Component {
               path="/closetItemPage"
               component={ClosetItemView} // UPDATED THIS TO ClosetItemView via NAME CHANGE AND PATH CHANGE
             />
+
+            <Route 
+            exact
+            path="/addItems"
+            component={AddItems}/>
 
             {/* For protected routes, the view could show one of several things on the same route.
             Visiting localhost:3000/user will show the UserPage if the user is logged in.
