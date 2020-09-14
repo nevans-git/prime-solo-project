@@ -36,31 +36,31 @@ class WinterCloset extends React.Component {
             <h2>Winter Closet</h2>
             <div>
                 <h3>Tops</h3>
-                <img src={'tops.jpg'} alt='Tops image'/>
+                <img src={require('./tops.jpeg')} alt='Tops image'/>
             </div>
             <div>
                 <h3>Bottoms</h3>
-                <img src={'bottoms.jpg'} alt='Bottoms image'/>
+                <img src={require('./bottoms.jpg')} alt='Bottoms image'/>
             </div>
             <div>
                 <h3>Hoodies</h3>
-                <img src={'hoodies.jpeg'} alt='Hoodies image'/>
+                <img src={require('./hoodies.jpeg')} alt='Hoodies image'/>
             </div>
             <div>
                 <h3>Jackets</h3>
-                <img src={'jackets.jpg'} alt='Jackets image'/>
+                <img src={require('./jackets.jpg')} alt='Jackets image'/>
             </div>
             <div>
                 <h3>Shoes</h3>
-                <img src={'shoes.jpg'} alt='Shoes image'/>
+                <img src={require('./shoes.jpg')} alt='Shoes image'/>
             </div>
             <div>
                 <h3>Socks</h3>
-                <img src={'socks.jpg'} alt='Socks image'/>
+                <img src={require('./socks.jpg')} alt='Socks image'/>
             </div>
             <div>
                 <h3>Hats</h3>
-                <img src={'hats.jpg'} alt='Hats image'/>
+                <img src={require('./hats.jpg')} alt='Hats image'/>
             </div>
             {/* Delete this break when you start styling */}
             <br />

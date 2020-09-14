@@ -67,20 +67,20 @@ class MyCloset extends React.Component {
       <p>Click on one of the images to see the seasonal items in the closet!</p>
       <div>
         <h3>Fall</h3>
-        <img src={"./FallClosetPic.jpg"} alt='fall image' onClick={this.handleFallImageClick} />
+        <img src={require("./FallClosetPic.jpg")} alt='fall image' onClick={this.handleFallImageClick} />
       </div>
       <div>
         <h3>Winter</h3>
-        <img src={'./WinterClosetPic.jpg'} alt='winter image' onClick={this.handleWinterImageClick}/>
+        <img src={require('./WinterClosetPic.jpg')} alt='winter image' onClick={this.handleWinterImageClick}/>
       </div>
       <div>
         <h3>Spring/Summer</h3>
-        <img src={"./SpringSummerCloset.jpg"} alt='spring/summer image' onClick={this.handleSpringSummerImageClick}/>
+        <img src={require("./SpringSummerClosetPic.jpg")} alt='spring/summer image' onClick={this.handleSpringSummerImageClick}/>
       </div>
       <br/>
       <div>
         <h3>Miscellaneous</h3>
-        <img src={"./misc.jpg"} alt='Miscellaneous image' onClick={this.handleSpringSummerImageClick}/>
+        <img src={require("./misc.jpg")} alt='Miscellaneous image' onClick={this.handleMiscImageClick}/>
       </div>
       <br/>
       <div>

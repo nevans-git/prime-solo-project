@@ -36,15 +36,15 @@ class MiscCloset extends React.Component {
             <h2>Miscellaneous Closet</h2>
             <div>
                 <h3>Jewlery</h3>
-                <img src={'jewelery.jpeg'} alt='Jewelery image'/>
+                <img src={require('./jewelry.jpeg')} alt='Jewelry image'/>
             </div>
             <div>
                 <h3>Bags</h3>
-                <img src={'bags.jpg'} alt='Bags image'/>
+                <img src={require('./bags.jpg')} alt='Bags image'/>
             </div>
             <div>
                 <h3>Luggage</h3>
-                <img src={'luggage.jpg'} alt='Luggage image'/>
+                <img src={require('./luggage.jpg')} alt='Luggage image'/>
             </div>
             {/* Delete the break when you start styling */}
             <br />

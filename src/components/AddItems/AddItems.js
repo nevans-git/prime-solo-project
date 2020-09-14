@@ -25,7 +25,7 @@ class AddItems extends React.Component {
   handleBack = () => {
     console.log('back button clicked!');
 
-    this.props.history.push('/home'); // Sending user back to the previous page (Home)
+    this.props.history.push('/myCloset'); // Sending user back to the previous page (myCloset)
     
   }
 
@@ -52,6 +52,9 @@ class AddItems extends React.Component {
                         <option value="shoes">Shoes</option>
                         <option value="socks">Socks</option>
                         <option value="hats">Hats</option>
+                        <option value="jewelry">Jewelry</option>
+                        <option value="bags">Bags</option>
+                        <option value="luggage">Luggage</option>
                     </select>
                 </label>
                 <br />
@@ -61,6 +64,7 @@ class AddItems extends React.Component {
                         <option value="fall">Fall</option>
                         <option value="winter">Winter</option>
                         <option value="spring-summer">Spring/Summer</option>
+                        <option value="miscellaneous">Miscellaneous</option>
                     </select>
                 </label>
                 <br />
