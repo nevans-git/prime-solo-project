@@ -30,9 +30,17 @@ class SpringSummerCloset extends React.Component {
         
     }
 
+    handleBack = () => {
+        this.props.history.push('/myCloset'); // Taking user back to the previous page
+      }
+
     render(){
         return(
             <>
+            <div>
+                <button onClick={this.handleBack}>Back</button>
+            </div>
+
             <h2>Spring/Summer Closet</h2>
             <div>
                 <h3>Tops</h3>

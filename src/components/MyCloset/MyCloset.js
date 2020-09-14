@@ -23,28 +23,28 @@ class MyCloset extends React.Component {
     console.log('fall image was clicked!');
   
 
-    this.props.history.push(`/closetItemPage`); // REMEMBER TO SETUP ROUTE FOR THIS in APP.JS
+    this.props.history.push(`/FallClosetPage`); // REMEMBER TO SETUP ROUTE FOR THIS in APP.JS
     
   }
   
   handleWinterImageClick = () => {
     console.log('winter image was clicked!'); // REMEMBER TO SETUP ROUTE FOR THIS in APP.JS
   
-    this.props.history.push('/closetItemPage'); // Need to figure out how to trigger Winter closet specifically after the user clicks on this image
+    this.props.history.push('/winterClosetPage'); // Need to figure out how to trigger Winter closet specifically after the user clicks on this image
     
   }
   
   handleSpringSummerImageClick = () => {
     console.log('spring/summer image was clicked!'); // MIGHT HAVE TO DO SPECIFIC SAGA STUFF TO GET THE NEXT PAGE TO LOAD THE RIGHT DATA
   
-    this.props.history.push('/closetItemPage'); // REMEMBER TO SETUP ROUTE FOR THIS in APP.JS
+    this.props.history.push('/springSummerClosetPage'); // REMEMBER TO SETUP ROUTE FOR THIS in APP.JS
     
   }
 
   handleMiscImageClick = () => {
     console.log('miscellaneous image clicked!');
 
-    this.props.history.push('/closetItemPage'); 
+    this.props.history.push('/miscClosetPage'); 
     
   }
 

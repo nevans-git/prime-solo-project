@@ -22,6 +22,10 @@ import RegisterPage from '../RegisterPage/RegisterPage';
 
 import './App.css';
 import AddItems from '../AddItems/AddItems';
+import FallCloset from '../FallCloset/FallCloset';
+import SpringSummerCloset from '../SpringSummerCloset/SpringSummerCloset';
+import MiscCloset from '../MiscCloset/MiscCloset';
+import WinterCloset from '../WinterCloset/WinterCloset';
 
 class App extends Component {
   componentDidMount() {
@@ -45,7 +49,27 @@ class App extends Component {
               component={ClosetItemView} // UPDATED THIS TO ClosetItemView via NAME CHANGE AND PATH CHANGE
             />
 
-            <Route 
+            <ProtectedRoute 
+            exact
+            path='/fallClosetPage'
+            component={FallCloset}/>
+
+            <ProtectedRoute 
+            exact
+            path='/winterClosetPage'
+            component={WinterCloset}/>
+
+            <ProtectedRoute 
+            exact
+            path='/springSummerClosetPage'
+            component={SpringSummerCloset}/>
+
+            <ProtectedRoute 
+            exact
+            path='/miscClosetPage'
+            component={MiscCloset}/>
+
+            <ProtectedRoute 
             exact
             path="/addItems"
             component={AddItems}/>

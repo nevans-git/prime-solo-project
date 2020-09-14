@@ -24,7 +24,7 @@ class ClosetItemView extends React.Component {
       <button onClick={this.handleBack}>Back</button>
     </div>
     <div className="container">
-      <FallCloset />
+      
       <WinterCloset />
       <SpringSummerCloset />
       <MiscCloset />

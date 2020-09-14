@@ -22,7 +22,6 @@ class FallCloset extends React.Component {
 
         this.props.dispatch({ type: 'FETCH_FALL_CLOSET'}); // GONNA HAVE TO DO ANOTHER BUT SENDING DATA TO THE SERVER IN THE ADD ITEM WHEN YOU GET TO IT
     }
-
     handleAddItem = () => {
         console.log('add item button was clicked!');
 
@@ -30,11 +29,34 @@ class FallCloset extends React.Component {
         
     }
 
+    handleBack = () => {
+        this.props.history.push('/myCloset'); // Taking user back to the previous page
+      }
+
     render(){
         return(
             <>
-            <h2>Fall Closet</h2>
+            {/* {this.props.fall.map((fallItems) => {
+                return(
+                    <div key={fallItems.type}>
+                        <h2>{fallItems.type}</h2>
+                        <p>{fallItems.item_condition}</p>
+                        <p>{fallItems.item_description}</p>
+                        <p>{fallItems.item_value}</p>
+                    </div>
+                    
+
+                )
+            })} */}
             <div>
+                <button onClick={this.handleBack}>Back</button>
+            </div>
+            
+            <h2>Fall Closet</h2>
+            
+            <p>{JSON.stringify(this.props.store.fall)}</p>
+
+            {/* <div>
                 <h3>Tops</h3>
                 <img src={require('./tops.jpeg')} alt='Tops image'/>
             </div>
@@ -61,7 +83,7 @@ class FallCloset extends React.Component {
             <div>
                 <h3>Hats</h3>
                 <img src={require('./hats.jpg')} alt='Hats image'/>
-            </div>
+            </div> */}
             {/* Take out break when you start styling */}
             <br/> 
 
