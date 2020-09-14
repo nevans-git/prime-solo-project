@@ -20,3 +20,5 @@ router.get('/', (req, res) => {
       
   })
 });
+
+// Might need to add a post route here to get the data to post to the DOM

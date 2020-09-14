@@ -42,7 +42,6 @@ const Nav = (props) => {
         <Link className="nav-link" to="/closetItemPage"> 
           Item Page
         </Link>
-        <Link to="/addItems">Add Item</Link>
       </div>
     </div>
   );

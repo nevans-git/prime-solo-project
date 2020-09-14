@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import mapStoreToProps from '../../redux/mapStoreToProps';
+import {withRouter} from 'react-router-dom';
 
 // THIS WILL BE IMPORTED INTO THE ClosetItemView!!!
 class SpringSummerCloset extends React.Component {
@@ -25,7 +26,7 @@ class SpringSummerCloset extends React.Component {
     handleAddItem = () => {
         console.log('add item button was clicked!');
 
-        this.props.history.push(''); // Add the '/addItem' route in here when its made 
+        this.props.history.push('/addItems'); // Add the '/addItem' route in here when its made 
         
     }
 
@@ -65,11 +66,11 @@ class SpringSummerCloset extends React.Component {
             <br />
 
             <div>
-                <button>Add Item</button>
+                <button onClick={this.handleAddItem}>Add Item</button>
             </div>
             </>
         )
     }
 }
 
-export default connect(mapStoreToProps)(SpringSummerCloset);
+export default connect(mapStoreToProps)(withRouter(SpringSummerCloset));

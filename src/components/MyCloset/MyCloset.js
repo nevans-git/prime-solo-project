@@ -41,6 +41,13 @@ class MyCloset extends React.Component {
     
   }
 
+  handleMiscImageClick = () => {
+    console.log('miscellaneous image clicked!');
+
+    this.props.history.push('/closetItemPage'); 
+    
+  }
+
   handleBack = () => {
     console.log('back button clicked!');
 
@@ -57,6 +64,7 @@ class MyCloset extends React.Component {
       {/* Figure out how to get the images to display */}
       <div>
       <h2>MyClosets</h2>
+      <p>Click on one of the images to see the seasonal items in the closet!</p>
       <div>
         <h3>Fall</h3>
         <img src={"./FallClosetPic.jpg"} alt='fall image' onClick={this.handleFallImageClick} />
@@ -68,6 +76,11 @@ class MyCloset extends React.Component {
       <div>
         <h3>Spring/Summer</h3>
         <img src={"./SpringSummerCloset.jpg"} alt='spring/summer image' onClick={this.handleSpringSummerImageClick}/>
+      </div>
+      <br/>
+      <div>
+        <h3>Miscellaneous</h3>
+        <img src={"./misc.jpg"} alt='Miscellaneous image' onClick={this.handleSpringSummerImageClick}/>
       </div>
       <br/>
       <div>
