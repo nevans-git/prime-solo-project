@@ -36,18 +36,19 @@ class FallCloset extends React.Component {
     render(){
         return(
             <>
-            {/* {this.props.fall.map((fallItems) => {
+            {this.props.store.fall.map((fallItems) => {
                 return(
                     <div key={fallItems.type}>
                         <h2>{fallItems.type}</h2>
                         <p>{fallItems.item_condition}</p>
                         <p>{fallItems.item_description}</p>
                         <p>{fallItems.item_value}</p>
+                        {/* <button >Delete</button> */}
                     </div>
                     
 
                 )
-            })} */}
+            })}
             <div>
                 <button onClick={this.handleBack}>Back</button>
             </div>

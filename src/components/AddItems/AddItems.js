@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
 import LogOutButton from '../LogOutButton/LogOutButton'; // Remember to import this whenever you use the logout button
+import { connect } from 'react-redux';
+import mapStoreToProps from '../../redux/mapStoreToProps';
+import {withRouter} from 'react-router-dom';
 
 // import { Component } from 'react';
 
@@ -19,6 +22,15 @@ import LogOutButton from '../LogOutButton/LogOutButton'; // Remember to import t
 // FIGURE OUT THE ROUTING... MIGHT HAVE TO JUST PUSH EVERYTHING TO ONE LOCATION
 class AddItems extends React.Component {
 
+    state = {
+        type: 'tops',
+        season_id: 1,
+        item_description: '',
+        last_worn: '',
+        item_value: 0,
+        item_condition: 'new'    
+    }
+
     // make change function here for the text input fields 
 
 
@@ -29,7 +41,25 @@ class AddItems extends React.Component {
     
   }
 
+  handleChangeState(property, event) {
+    // checking to see what state is.... Seems like its one behind for some reason
+    this.setState({
+        ...this.state, // Spreading state
+        [property]: event.target.value // this is a dynamic way to manipulate state
+    })
+    
+    
+  }
+  
+  handleSubmitItem = () => {
+      console.log('add item button clicked!');
+
+      this.props.dispatch({ type: 'SEND_ADDED_ITEMS', payload: this.state }); // LEFT
+      
+  }
+
   render() {
+    console.log(this.state); // most up to date version of state before render
     return (
       <>
       <div>
@@ -44,7 +74,7 @@ class AddItems extends React.Component {
             <form>
                 <label>
                     Item:
-                    <select>
+                    <select onChange={(event) => this.handleChangeState('type', event)} value={this.state.type}> 
                         <option value="tops">Tops</option>
                         <option value="bottoms">Bottoms</option>
                         <option value="hoodies">Hoodies</option>
@@ -60,32 +90,33 @@ class AddItems extends React.Component {
                 <br />
                 <label>
                     Season:
-                    <select>
-                        <option value="fall">Fall</option>
-                        <option value="winter">Winter</option>
-                        <option value="spring-summer">Spring/Summer</option>
-                        <option value="miscellaneous">Miscellaneous</option>
+                    {/* onChange is working but it appears to be one behind in the console for each field */}
+                    <select onChange={(event) => this.handleChangeState('season_id', event)} value={this.state.season_id}> 
+                        <option value='1'>Fall</option>
+                        <option value='2'>Winter</option>
+                        <option value='3'>Spring/Summer</option>
+                        <option value="4">Miscellaneous</option>
                     </select>
                 </label>
                 <br />
                 <label>
                     Item Description:
-                    <input type="text" placeholder="description" ></input>
+                    <input type="text" placeholder="description" onChange={(event) => this.handleChangeState('item_description', event)} value={this.state.item_description}></input>
                 </label>
                 <br />
                 <label>
                     Date:
-                    <input type="date" ></input>
+                    <input type="date" onChange={(event) => this.handleChangeState('last_worn', event)} value={this.state.last_worn}></input>
                 </label>
                 <br />
                 <label>
                     Item Value ($):
-                    <input type="number" placeholder="value"></input>
+                    <input type="number" placeholder="value" onChange={(event) => this.handleChangeState('item_value', event)} value={this.state.item_value}></input>
                 </label>
                 <br />
                 <label>
                     Item Condition:
-                    <select>
+                    <select onChange={(event) => this.handleChangeState('item_condition', event)} value={this.state.item_condition}>
                         <option value="new">New</option>
                         <option value="good">Good</option>
                         <option value="average">Average</option>
@@ -93,8 +124,12 @@ class AddItems extends React.Component {
                     </select>
                 </label>
                 <br />
-                <input type="submit" value="Submit" />
+                {/* Figure out why there's an error when theres a button  */}
+                <input type='submit' onClick={this.handleSubmitItem}></input>
+                
             </form>
+        </div>
+        <div>
         </div>
       <div>
         <LogOutButton className="log-in" /> 
@@ -129,4 +164,4 @@ class AddItems extends React.Component {
 //   </>
 // );
 
-export default AddItems;
+export default connect(mapStoreToProps)(withRouter(AddItems));

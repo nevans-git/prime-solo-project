@@ -19,6 +19,7 @@ const rootReducer = combineReducers({
   // winter,
   // springSummer,
   // misc,
+  
 
 });
 

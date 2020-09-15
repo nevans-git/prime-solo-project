@@ -1,9 +1,9 @@
-const fallReducer = (state = {}, action) => {
+const fallReducer = (state = [], action) => {
     switch (action.type) {
       case 'SET_FALL_CLOSET':
         return action.payload;
       case 'UNSET_USER':
-        return {};
+        return [];
       default:
         return state;
     }
