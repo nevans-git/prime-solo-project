@@ -6,6 +6,7 @@ import fallClosetSaga from './fallCloset.saga'; // imported fallClosetSaga funct
 import winterClosetSaga from './winterCloset.saga'; // imported winterClosetSaga function
 import springSummerClosetSaga from './springSummerCloset.saga';
 import sendClosetSaga from './addItems.saga';
+import deleteClosetItem from './deleteItem.saga';
 
 // rootSaga is the primary saga.
 // It bundles up all of the other sagas so our project can use them.
@@ -23,6 +24,6 @@ export default function* rootSaga() {
     winterClosetSaga(),
     springSummerClosetSaga(),
     sendClosetSaga(),
-    
+    deleteClosetItem(),
   ]);
 }

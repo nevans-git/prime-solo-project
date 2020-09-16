@@ -22,10 +22,20 @@ class FallCloset extends React.Component {
 
         this.props.dispatch({ type: 'FETCH_FALL_CLOSET'}); // GONNA HAVE TO DO ANOTHER BUT SENDING DATA TO THE SERVER IN THE ADD ITEM WHEN YOU GET TO IT
     }
+
     handleAddItem = () => {
         console.log('add item button was clicked!');
 
         this.props.history.push('/addItems'); // Add the '/addItem' route in here when its made ... and add it to add item button below
+        
+    }
+
+    handleDelete = (id) => {
+        console.log('deleted item!', id );
+        
+
+        this.props.dispatch({ type: 'DELETE_CLOSET_ITEM', payload: id });
+        // this.remove(id);
         
     }
 
@@ -43,7 +53,7 @@ class FallCloset extends React.Component {
                         <p>{fallItems.item_condition}</p>
                         <p>{fallItems.item_description}</p>
                         <p>{fallItems.item_value}</p>
-                        {/* <button >Delete</button> */}
+                        <button onClick={() => this.handleDelete(fallItems.id)}>Delete</button>
                     </div>
                     
 

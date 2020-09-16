@@ -17,10 +17,36 @@ router.get('/', (req, res) => {
       res.send(response.rows);
 
   }).catch((error) => {
-      console.log('error in GET in fallCloset.router.js', error);
+      console.log('error in GET fallCloset.router.js', error);
+
+      res.sendStatus(500);
       
   })
 });
+
+// console.log(req.body in here )
+router.delete('/:id', (req, res) => {
+  console.log(req.body);
+
+  let id = req.params.id;
+  console.log('deleted route with id of: ', id);
+  
+  
+  let queryText = `DELETE FROM "items" WHERE "id" = $1`;
+
+  pool.query(queryText, [id]).then((response) => {
+    console.log(response.rows);
+
+    res.sendStatus(200);
+    
+  }).catch((error) => {
+    console.log('error in DELETE in fallCloset.router.js', error);
+
+    res.sendStatus(500);
+    
+  })
+});
+
 
 //router.post('/,')
 
